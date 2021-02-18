@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>智慧供热运行平台</title>
+<!--
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+-->
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=RvbM40ylTtCpDBlUufGnnHPxKnphkLHb"></script>
+
+  <style>
+/*
+    body {
+      background: #104E8B;
+      text-align: center;
+    }
+*/
+    body {
+        background: #104E8B;
+    }
+    h1 {
+      color: #FFFFFF;
+      margin: 0;
+      font: 2em verdana;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      text-align: center;
+    }
+
+    h2 {
+      color: #ccc;
+      margin: 0;
+      font: 1em verdana;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      text-align: center;
+    }
+
+    /*
+     * Loading Dots
+     * Can we use pseudo elements here instead :after?
+     */
+    .loading span {
+      display: inline-block;
+      width: 1.4em;
+      height:1.4em;
+      margin:.3em;
+      background: #007DB6;
+      border-radius: 0.7em;
+      animation: loading 2.0s infinite alternate;
+    }
+
+    /*
+     * Dots Colors
+     * Smarter targeting vs nth-of-type?
+     */
+    .loading span:nth-of-type(1) {
+      background: #008FB2;
+      animation-delay: 0.2s;
+    }
+    .loading span:nth-of-type(2) {
+      background: #008FB2;
+      animation-delay: 0.4s;
+    }
+    .loading span:nth-of-type(3) {
+      background: #009B9E;
+      animation-delay: 0.6s;
+    }
+    .loading span:nth-of-type(4) {
+      background: #00A77D;
+      animation-delay: 0.8s;
+    }
+    .loading span:nth-of-type(5) {
+      background: #00B247;
+      animation-delay: 1.0s;
+    }
+    .loading span:nth-of-type(6) {
+      background: #5AB027;
+      animation-delay: 1.2s;
+    }
+    .loading span:nth-of-type(7) {
+      background: #A0B61E;
+      animation-delay: 1.4s;
+    }
+    .loading span:nth-of-type(8) {
+      background: #BBBBBB;
+      animation-delay: 1.6s;
+    }
+    .loading span:nth-of-type(9) {
+      background: #FFFFFF;
+      animation-delay: 1.8s;
+    }
+
+
+    /*
+     * Animation keyframes
+     * Use transition opacity instead of keyframes?
+     */
+    @keyframes loading {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+  <!-- 全局配置 -->
+  <script>
+    window._CONFIG = {};
+    ///////////////////////////////////////////////////////////////////
+    // 正式环境
+    window._CONFIG['domianURL'] = 'http://60.30.137.2:38081/hcsh';
+    // 开发环境
+    // window._CONFIG['domianURL'] = 'http://localhost:8081/hcsh';
+    ///////////////////////////////////////////////////////////////////
+    window._CONFIG['staticDomainURL'] = window._CONFIG['domianURL'] + '/sys/common/static';
+  </script>
+</head>
+
+<body>
+<!-- built files will be auto injected -->
+<div id="app" style="margin-left:auto;margin-right:auto;width:30%;">
+
+        <div class="loading" style="margin-left:auto;margin-right:auto;width:60%;">
+          <div style="height:400px"></div>
+            <h1>智慧供热运行平台</h1>
+        </div><br><br>
+        <div class="loading" style="margin-left:auto;margin-right:auto;width:40%;">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div><br><br>
+        <div class="loading" style="margin-left:auto;margin-right:auto;width:60%;">
+            <h2>华春能源集团</h2><br>
+        </div>
+      </div>
+
+</body>
+
+</html>
